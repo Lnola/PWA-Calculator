@@ -7,6 +7,7 @@ const Input = ({ input }) => {
     <StyledInput
       type="text"
       value={input}
+      onChange={() => {}}
       onKeyDown={e => {
         e.preventDefault();
       }}
