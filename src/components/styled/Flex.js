@@ -24,6 +24,7 @@ export const flex = css`
   ${({ justifySelf }) => justifySelf && `justify-self: ${getAlignValue(justifySelf)};`}
   ${({ alignItems }) => alignItems && `align-items: ${getAlignValue(alignItems)};`}
   ${({ alignSelf }) => alignSelf && `align-self: ${getAlignValue(alignSelf)};`}
+  ${({ basis }) => basis && `flex-basis: ${basis};`}
   ${({ wrap }) => wrap && `flex-wrap: ${wrap};`}
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ padding }) => padding && `padding: ${padding};`}
@@ -34,6 +35,22 @@ export const flex = css`
 `;
 
 const Flex = styled.div`
+  ${flex}
+`;
+
+export const FlexSpan = styled.span`
+  ${flex}
+`;
+
+export const FlexSection = styled.section`
+  ${flex}
+`;
+
+export const FlexArticle = styled.article`
+  ${flex}
+`;
+
+export const FlexMain = styled.main`
   ${flex}
 `;
 

@@ -1,7 +1,16 @@
-import React from "react";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import Home from 'screens/Home';
+import { GlobalStyles, theme } from 'index.styled';
 
 const App = () => {
-  return <></>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Home />
+    </ThemeProvider>
+  );
 };
 
 export default App;
