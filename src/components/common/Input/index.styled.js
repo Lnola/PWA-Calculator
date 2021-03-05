@@ -6,6 +6,8 @@ export const StyledInput = styled.textarea`
   border: none;
   font-size: 2rem;
   font-family: inherit;
+  background-color: transparent;
+  color: ${({ theme }) => theme.light};
 
   &:focus {
     outline: none;

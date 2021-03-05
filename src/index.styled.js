@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
     font-family: "Roboto";
     overflow: hidden;
+    background-color:${({ theme }) => theme.background};
     
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -20,8 +21,9 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const theme = {
-  primaryDark: '#0D0C1D',
-  primaryLight: '#EFFFFA',
-  primaryHover: '#343078',
-  mobile: '576px',
+  background: '#181818',
+  primary: '#313131',
+  secondary: '#616061',
+  highlight: '#6d6d6d',
+  light: '#fcfcfc',
 };
