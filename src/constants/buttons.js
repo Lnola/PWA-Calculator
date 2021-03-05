@@ -4,9 +4,12 @@ import { handleDotClick } from 'utils/handleDotClick';
 import { handleOperationClick } from 'utils/handleOperationClick';
 import { handleCalculateClick } from 'utils/handleCalculateClick';
 
-const buttons = setInput => {
+const buttons = (setInput, input, setResult) => {
   const empty = {
-    symbol: '',
+    // symbol: '',
+
+    symbol: 'DEL',
+    onClick: () => setInput(prevState => prevState.slice(0, -1)),
   };
 
   const one = {
@@ -91,17 +94,21 @@ const buttons = setInput => {
 
   const equals = {
     symbol: '=',
-    onClick: () => handleCalculateClick(setInput),
+    onClick: () => handleCalculateClick(input, setResult),
   };
 
   const backspace = {
-    symbol: 'DEL',
-    onClick: () => setInput(prevState => prevState.slice(0, -1)),
+    // symbol: 'DEL',
+    // onClick: () => setInput(prevState => prevState.slice(0, -1)),
+    symbol: ')',
+    onClick: () => handleNumberClick(')', setInput),
   };
 
   const clear = {
-    symbol: 'CLR',
-    onClick: () => setInput(''),
+    // symbol: 'CLR',
+    // onClick: () => setInput(''),
+    symbol: '(',
+    onClick: () => handleNumberClick('(', setInput),
   };
 
   return [
