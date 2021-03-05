@@ -5,7 +5,7 @@ import { ButtonCss } from './index.styled';
 
 const Button = ({ symbol, onClick }) => {
   return (
-    <FlexSpan justifyContent="center" alignItems="center" basis="25%" css={ButtonCss} onClick={onClick}>
+    <FlexSpan justifyContent="center" alignItems="center" basis="20%" css={ButtonCss} onClick={onClick}>
       {symbol}
     </FlexSpan>
   );

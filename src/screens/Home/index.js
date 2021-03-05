@@ -20,7 +20,7 @@ const Home = () => {
 
       <FlexSection wrap="wrap" height="100%">
         {buttons(setInput, input, setResult).map((row, index) => (
-          <FlexArticle key={index} basis="100%" height={`${window.innerWidth / 4}px`}>
+          <FlexArticle key={index} basis="100%" height={`${window.innerWidth / 5}px`}>
             {row.map(({ symbol, onClick }) => (
               <Button key={symbol} symbol={symbol} onClick={onClick} />
             ))}
