@@ -6,6 +6,7 @@ const StyledResult = styled.div`
   height: 4.489rem;
   text-align: right;
   color: ${({ theme }) => theme.light};
+  overflow-y: scroll;
 `;
 
 export { StyledResult };

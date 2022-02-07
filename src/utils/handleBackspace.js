@@ -1,4 +1,4 @@
-const handleBackspace = (setInput, inputRef) => () => {
+const handleBackspace = (setInput, inputRef, setResult) => () => {
   const { selectionStart } = inputRef.current;
   inputRef.current.focus();
 
@@ -7,6 +7,7 @@ const handleBackspace = (setInput, inputRef) => () => {
   );
 
   inputRef.current.blur(); // hide the chevron jump to end
+  setResult('');
 
   // set the chevron to the old position, timeout for setState
   setTimeout(() => {

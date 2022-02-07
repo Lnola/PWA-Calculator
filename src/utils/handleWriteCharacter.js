@@ -1,4 +1,4 @@
-const handleWriteCharacter = (character, setInput, inputRef) => () => {
+const handleWriteCharacter = (character, setInput, inputRef, setResult) => () => {
   const { selectionStart } = inputRef.current;
   inputRef.current.focus();
 
@@ -8,12 +8,13 @@ const handleWriteCharacter = (character, setInput, inputRef) => () => {
   );
 
   inputRef.current.blur(); // hide the chevron jump to end
+  setResult('');
 
   // set the chevron to the old position, timeout for setState
   setTimeout(() => {
     inputRef.current.focus(); // hide the chevron jump to end
-    inputRef.current.selectionStart = selectionStart + 1;
-    inputRef.current.selectionEnd = selectionStart + 1;
+    inputRef.current.selectionStart = selectionStart + character.length;
+    inputRef.current.selectionEnd = selectionStart + character.length;
   }, 1);
 };
 

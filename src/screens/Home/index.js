@@ -10,6 +10,7 @@ import buttons from 'constants/buttons';
 const Home = () => {
   const [input, setInput] = useState('');
   const [result, setResult] = useState();
+  const [layoutIndex, setLayoutIndex] = useState(0);
   const inputRef = useRef();
 
   return (
@@ -19,7 +20,7 @@ const Home = () => {
       <StyledResult>{result}</StyledResult>
 
       <FlexSection wrap="wrap" height="100%">
-        {buttons(setInput, setResult, inputRef).map((row, index) => (
+        {buttons(setInput, setResult, inputRef, layoutIndex, setLayoutIndex).map((row, index) => (
           <FlexArticle key={index} basis="100%" height={`${window.innerWidth / 5}px`}>
             {row.map(({ symbol, onClick, type }) => (
               <Button key={symbol} symbol={symbol} onClick={onClick} type={type} />

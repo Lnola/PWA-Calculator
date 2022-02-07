@@ -1,9 +1,27 @@
-const handleGetResult = (inputRef, setResult) => () => {
-  // console.log(inputRef.current?.value.match(/[× ÷ + ⎯]+|[a-zA-Z 0-9 . ( )]+/g));
-  // console.log(inputRef.current?.value.match(/[a-zA-Z 0-9 . [^(][^%]*%[\d\D][^)]]+/g));
-  console.log(inputRef.current?.value.match(/[(](?:[^× ÷ + ⎯])[\d\D]*?[)]/g));
+import { evaluate } from 'mathjs';
 
-  setResult(20);
+const handleGetResult = (inputRef, setResult) => () => {
+  try {
+    setResult(
+      evaluate(
+        inputRef.current?.value
+          .replace('×', '*')
+          .replace('÷', '/')
+          .replace('√', 'sqrt')
+          .replace('ln', 'log')
+          .replace('tg', 'tan')
+          .replace('ctg', '1/tan')
+          .replace('arcsin', 'asin')
+          .replace('arccos', 'acos')
+          .replace('arctg', 'atan')
+          .replace('arcctg', '1/atan')
+          .replace('π', 'pi')
+          .replace('binom', 'combinations'),
+      ).toFixed(8),
+    );
+  } catch ({ message }) {
+    setResult(message);
+  }
 };
 
 export { handleGetResult };
