@@ -18,6 +18,10 @@ export const GlobalStyles = createGlobalStyle`
     -ms-user-select: none;
     user-select: none;
   }
+
+  textarea {
+    resize: none;
+  }
 `;
 
 export const theme = {
