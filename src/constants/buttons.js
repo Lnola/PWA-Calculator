@@ -80,25 +80,25 @@ const buttons = (setInput, setResult, inputRef, layoutIndex, setLayoutIndex) => 
 
   const multiply = {
     symbol: '×',
-    onClick: handleWriteCharacter(' × ', setInput, inputRef, setResult),
+    onClick: handleWriteCharacter('×', setInput, inputRef, setResult),
     type: buttonTypes.functional,
   };
 
   const divide = {
     symbol: '÷',
-    onClick: handleWriteCharacter(' ÷ ', setInput, inputRef, setResult),
+    onClick: handleWriteCharacter('÷', setInput, inputRef, setResult),
     type: buttonTypes.functional,
   };
 
   const add = {
     symbol: '+',
-    onClick: handleWriteCharacter(' + ', setInput, inputRef, setResult),
+    onClick: handleWriteCharacter('+', setInput, inputRef, setResult),
     type: buttonTypes.functional,
   };
 
   const subtract = {
     symbol: '-',
-    onClick: handleWriteCharacter(' - ', setInput, inputRef, setResult),
+    onClick: handleWriteCharacter('-', setInput, inputRef, setResult),
     type: buttonTypes.functional,
   };
 
