@@ -1,6 +1,6 @@
 {
-  "homepage": "https://lnola.github.io/pwa-calculator",
   "name": "pwa_calculator",
+  "homepage": "https://lnola.github.io/pwa_calculator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
