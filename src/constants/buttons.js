@@ -1,67 +1,67 @@
-import { handleNumber } from 'utils/handleNumber';
 import { handleBackspace } from 'utils/handleBackspace';
+import { handleGetResult } from 'utils/handleGetResult';
+import { handleWriteCharacter } from 'utils/handleWriteCharacter';
 
 import buttonTypes from './buttonTypes';
-import { handleOperation } from 'utils/handleOperation';
 
-const buttons = (setInput, inputRef) => {
+const buttons = (setInput, setResult, inputRef) => {
   const one = {
     symbol: '1',
-    onClick: handleNumber('1', setInput, inputRef),
+    onClick: handleWriteCharacter('1', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const two = {
     symbol: '2',
-    onClick: handleNumber('2', setInput, inputRef),
+    onClick: handleWriteCharacter('2', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const three = {
     symbol: '3',
-    onClick: handleNumber('3', setInput, inputRef),
+    onClick: handleWriteCharacter('3', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const four = {
     symbol: '4',
-    onClick: handleNumber('4', setInput, inputRef),
+    onClick: handleWriteCharacter('4', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const five = {
     symbol: '5',
-    onClick: handleNumber('5', setInput, inputRef),
+    onClick: handleWriteCharacter('5', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const six = {
     symbol: '6',
-    onClick: handleNumber('6', setInput, inputRef),
+    onClick: handleWriteCharacter('6', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const seven = {
     symbol: '7',
-    onClick: handleNumber('7', setInput, inputRef),
+    onClick: handleWriteCharacter('7', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const eight = {
     symbol: '8',
-    onClick: handleNumber('8', setInput, inputRef),
+    onClick: handleWriteCharacter('8', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const nine = {
     symbol: '9',
-    onClick: handleNumber('9', setInput, inputRef),
+    onClick: handleWriteCharacter('9', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const zero = {
     symbol: '0',
-    onClick: handleNumber('0', setInput, inputRef),
+    onClick: handleWriteCharacter('0', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
@@ -79,49 +79,49 @@ const buttons = (setInput, inputRef) => {
 
   const multiply = {
     symbol: '×',
-    onClick: handleOperation('×', setInput, inputRef),
+    onClick: handleWriteCharacter('×', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const divide = {
     symbol: '÷',
-    onClick: handleOperation('÷', setInput, inputRef),
+    onClick: handleWriteCharacter('÷', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const add = {
     symbol: '+',
-    onClick: handleOperation('+', setInput, inputRef),
+    onClick: handleWriteCharacter('+', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const subtract = {
-    symbol: '-',
-    onClick: handleOperation('-', setInput, inputRef),
+    symbol: '⎯',
+    onClick: handleWriteCharacter('⎯', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const dot = {
     symbol: '.',
-    onClick: handleOperation('.', setInput, inputRef),
+    onClick: handleWriteCharacter('.', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const equals = {
     symbol: '=',
-    onClick: () => {},
+    onClick: handleGetResult(inputRef, setResult),
     type: buttonTypes.normal,
   };
 
   const openBracket = {
     symbol: '(',
-    onClick: handleOperation('(', setInput, inputRef),
+    onClick: handleWriteCharacter('(', setInput, inputRef),
     type: buttonTypes.normal,
   };
 
   const closeBracket = {
     symbol: ')',
-    onClick: handleOperation(')', setInput, inputRef),
+    onClick: handleWriteCharacter(')', setInput, inputRef),
     type: buttonTypes.normal,
   };
 

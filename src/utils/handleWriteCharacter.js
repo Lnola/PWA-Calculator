@@ -1,4 +1,4 @@
-const handleOperation = (character, setInput, inputRef) => () => {
+const handleWriteCharacter = (character, setInput, inputRef) => () => {
   const { selectionStart } = inputRef.current;
   inputRef.current.focus();
 
@@ -17,4 +17,4 @@ const handleOperation = (character, setInput, inputRef) => () => {
   }, 1);
 };
 
-export { handleOperation };
+export { handleWriteCharacter };
