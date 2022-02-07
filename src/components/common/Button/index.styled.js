@@ -8,10 +8,6 @@ export const ButtonCss = css`
 
   ${({ type, theme }) =>
     type === 'functional'
-      ? `background-color: ${theme.secondary}; color: ${theme.light};`
-      : type === 'bonus'
-      ? `background-color: ${theme.primary}; color: ${theme.secondary};`
-      : type === 'normal'
-      ? `background-color: ${theme.background}; color: ${theme.highlight};`
-      : ''}
+      ? `background-color: ${theme.background}; color: ${theme.light};`
+      : `background-color: ${theme.background}; color: ${theme.highlight};`}
 `;

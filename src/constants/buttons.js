@@ -69,37 +69,37 @@ const buttons = (setInput, setResult, inputRef, layoutIndex, setLayoutIndex) => 
   const backspace = {
     symbol: 'DEL',
     onClick: handleBackspace(setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const clear = {
     symbol: 'AC',
     onClick: handleClear(setInput, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const multiply = {
     symbol: '×',
     onClick: handleWriteCharacter(' × ', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const divide = {
     symbol: '÷',
     onClick: handleWriteCharacter(' ÷ ', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const add = {
     symbol: '+',
     onClick: handleWriteCharacter(' + ', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const subtract = {
     symbol: '-',
     onClick: handleWriteCharacter(' - ', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const dot = {
@@ -111,49 +111,49 @@ const buttons = (setInput, setResult, inputRef, layoutIndex, setLayoutIndex) => 
   const equals = {
     symbol: '=',
     onClick: handleGetResult(inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const openBracket = {
     symbol: '(',
     onClick: handleWriteCharacter('(', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const closeBracket = {
     symbol: ')',
     onClick: handleWriteCharacter(')', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const square = {
     symbol: '^2',
     onClick: handleWriteCharacter('^2', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const pow = {
     symbol: '^n',
     onClick: handleWriteCharacter('^', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const squareRoot = {
     symbol: '√',
     onClick: handleWriteCharacter('√(', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const nRoot = {
     symbol: 'n √',
     onClick: handleWriteCharacter('√(', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const swap = {
     symbol: '↪',
     onClick: () => setLayoutIndex(Math.abs(layoutIndex - 1)),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const empty = {
@@ -237,7 +237,7 @@ const buttons = (setInput, setResult, inputRef, layoutIndex, setLayoutIndex) => 
   const binomialCoefficient = {
     symbol: 'nCr',
     onClick: handleWriteCharacter('binom(', setInput, inputRef, setResult),
-    type: buttonTypes.normal,
+    type: buttonTypes.functional,
   };
 
   const comma = {
